@@ -37,16 +37,16 @@ export const Register = () => {
     return (
         <div className="register">
         
-        <div className="rContainer" >
-            <input className="rInput" value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="full Name" />
-            <input className="rInput" value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+        <div className="registerContainer" >
+            <input className="registerInput" value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="full Name" />
+            <input className="registerInput" value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
           
-            <input className="rInput" value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-                     <input className="rInput" value={phone} onChange={(e) => setPhone(e.target.value)} type="phone" placeholder="phone" id="phone" name="phone" />
-                   <input className="rInput" value={city} onChange={(e) => setCity(e.target.value)}  placeholder="city" id="city" name="city" />
+            <input className="registerInput" value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+                     <input className="registerInput" value={phone} onChange={(e) => setPhone(e.target.value)} type="phone" placeholder="phone" id="phone" name="phone" />
+                   <input className="registerInput" value={city} onChange={(e) => setCity(e.target.value)}  placeholder="city" id="city" name="city" />
             
-            <input className="rInput" value={country} onChange={(e) => setCountry(e.target.value)}  placeholder="country" id="country" name="country" />
-            <button className="rButton" onClick={handleSubmit}>Register</button>
+            <input className="registerInput" value={country} onChange={(e) => setCountry(e.target.value)}  placeholder="country" id="country" name="country" />
+            <button className="registerButton" onClick={handleSubmit}>Register</button>
         <Link to='/login' style={{textDecoration:"none" , color:"rgb(0, 73, 59)",textAlign:"center"}}>
         Already have an account? Login here.</Link>
         </div>
