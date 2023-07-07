@@ -9,7 +9,7 @@ import axios from "axios";
 const Datatable = ({columns}) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
-  const [list, setList] = useState();
+  const [list, setList] = useState([]);
   const { data, loading, error } = useFetch(`/${path}`);
 
   useEffect(() => {
@@ -27,13 +27,12 @@ const Datatable = ({columns}) => {
     {
       field: "action",
       headerName: "Action",
-      width: 200,
+      width: 100,
       renderCell: (params) => {
         return (
           <div className="cellAction">
-            <Link to="/users/test" style={{ textDecoration: "none" }}>
-              <div className="viewButton">View</div>
-            </Link>
+           
+            
             <div
               className="deleteButton"
               onClick={() => handleDelete(params.row._id)}
@@ -57,8 +56,8 @@ const Datatable = ({columns}) => {
         className="datagrid"
         rows={list}
         columns={columns.concat(actionColumn)}
-        pageSize={9}
-        rowsPerPageOptions={[9]}
+        pageSize={8}
+        rowsPerPageOptions={[8]}
         checkboxSelection
         getRowId={(row) => row._id}
       />

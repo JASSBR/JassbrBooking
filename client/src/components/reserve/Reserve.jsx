@@ -57,13 +57,17 @@ const Reserve = ({ setOpen, hotelId }) => {
         selectedRooms.map((roomId) => {
           const res = axios.put(`/rooms/availability/${roomId}`, {
             dates: alldates,
-          });
+          })
           return res.data;
         })
-      );
+        )
+
+        
       setOpen(false);
       navigate("/");
-    } catch (err) {}
+    } catch (err) {
+
+    }
   };
   return (
     <div className="reserve">
@@ -82,7 +86,7 @@ const Reserve = ({ setOpen, hotelId }) => {
               <div className="rMax">
                 Max people: <b>{item.maxPeople}</b>
               </div>
-              <div className="rPrice">{item.price}</div>
+              <div className="rPrice">{item.price} MAD</div>
             </div>
             <div className="rSelectRooms">
               {item.roomNumbers.map((roomNumber) => (

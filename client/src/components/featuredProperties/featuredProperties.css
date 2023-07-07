@@ -18,10 +18,11 @@
   max-width: 250px;
   height: 250px;
   object-fit: cover;
+  border-radius: 15px 15px 0 0;
 }
 
 .fpName{
-  color: #333;
+  color: rgb(0, 73, 59);
   font-weight: bold;
 }
 
@@ -34,7 +35,7 @@
 }
 
 .fpRating>button{
-  background-color: #003580;
+  background-color: rgb(0, 73, 59);
   color: white;
   border: none;
   padding: 3px;

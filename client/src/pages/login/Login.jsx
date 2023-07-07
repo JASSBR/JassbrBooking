@@ -3,6 +3,9 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
+import { faUser} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -34,7 +37,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="lContainer">
-        <input
+      <FontAwesomeIcon icon={faUser} flip size="2xl" style={{"--fa-secondary-opacity": "0.4",}} />        <input
           type="text"
           placeholder="username"
           id="username"

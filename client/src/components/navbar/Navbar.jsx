@@ -2,16 +2,23 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { faUser} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Navbar = () => {
   const { user } = useContext(AuthContext);
+
+  const logout = () =>{
+    localStorage.removeItem("user")
+  }
 
   return (
     <div className="navbar">
       <div className="navContainer">
         <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-          <span className="logo">MoroccanBooking </span>
+          <span className="logo">YIM Booking </span>
         </Link>
-        {user ? user.username : (
+        {user ? <div className="userContainer"> <FontAwesomeIcon icon={faUser} /> {user.username} + <span onClick={logout}>Log Out</span></div> : (
           <div className="navItems">
             {/* <button className="navButton">Register</button> */}
             {/* <button className="navButton">Login</button> */}

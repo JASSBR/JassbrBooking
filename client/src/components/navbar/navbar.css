@@ -1,6 +1,6 @@
 .navbar{
   height: 50px;
-  background-color: #003580;
+  background-color: rgb(0, 73, 59);
   display: flex;
   justify-content: center;
 }
@@ -8,7 +8,7 @@
 .navContainer{
   width: 100%;
   max-width: 1024px;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,10 +17,28 @@
 .logo{
   font-weight: 500;
 }
-
+.userContainer{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navButton:hover{
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  text-decoration: none;
+  color: rgb(0, 73, 59);
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 4px 15px;
+}
 .navButton{
   margin-left: 20px;
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
   color: white;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 3px 15px;
+  font-size: 14px;
 }

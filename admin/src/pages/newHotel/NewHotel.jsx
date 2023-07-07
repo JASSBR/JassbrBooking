@@ -6,8 +6,10 @@ import { useState } from "react";
 import { hotelInputs } from "../../formSource";
 import useFetch from "../../hooks/useFetch";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const NewHotel = () => {
+  const navigate = useNavigate();
   const [files, setFiles] = useState("");
   const [info, setInfo] = useState({});
   const [rooms, setRooms] = useState([]);
@@ -37,7 +39,7 @@ const NewHotel = () => {
           data.append("file", file);
           data.append("upload_preset", "upload");
           const uploadRes = await axios.post(
-            "https://api.cloudinary.com/v1_1/lamadev/image/upload",
+            "https://api.cloudinary.com/v1_1/dhgv7ngqr/image/upload",
             data
           );
 
@@ -53,6 +55,7 @@ const NewHotel = () => {
       };
 
       await axios.post("/hotels", newhotel);
+      navigate('/hotels')
     } catch (err) {console.log(err)}
   };
   return (

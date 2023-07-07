@@ -3,19 +3,20 @@ export const userInputs = [
     id: "username",
     label: "Username",
     type: "text",
-    placeholder: "john_doe",
+    placeholder: "Username",
+    
   },
   {
     id: "email",
     label: "Email",
     type: "email",
-    placeholder: "john_doe@gmail.com",
+    placeholder: "user@gmail.com",
   },
   {
     id: "phone",
     label: "Phone",
     type: "text",
-    placeholder: "+1 234 567 89",
+    placeholder: "+212 6XX-XXXXX",
   },
   {
     id: "password",
@@ -26,13 +27,13 @@ export const userInputs = [
     id: "country",
     label: "Country",
     type: "text",
-    placeholder: "USA",
+    placeholder: "Morocco",
   },
   {
     id: "city",
     label: "City",
     type: "text",
-    placeholder: "USA",
+    placeholder: "Rabat",
   },
 ];
 
@@ -86,13 +87,13 @@ export const hotelInputs = [
     id: "city",
     label: "City",
     type: "text",
-    placeholder: "New York",
+    placeholder: "Rabat",
   },
   {
     id: "address",
     label: "Address",
     type: "text",
-    placeholder: "elton st, 216",
+    placeholder: "Rabat, Agdal",
   },
   {
     id: "distance",
@@ -116,7 +117,7 @@ export const hotelInputs = [
     id: "cheapestPrice",
     label: "Price",
     type: "text",
-    placeholder: "100",
+    placeholder: "1000",
   },
 ];
 
